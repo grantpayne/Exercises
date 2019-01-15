@@ -15,6 +15,7 @@ namespace VariableNaming
             int initialNumberOfBirds = 4;
             int birdsThatFlewAway = 1;
             int remainingNumberOfBirds = initialNumberOfBirds - birdsThatFlewAway;
+            Console.WriteLine("Example 1: " + remainingNumberOfBirds + " birds left on the branch.");
 
             /*
             2. There are 6 birds and 3 nests. How many more birds are there than
@@ -25,7 +26,7 @@ namespace VariableNaming
             int numberOfBirds = 6;
             int numberOfNests = 3;
             int numberOfExtraBirds = numberOfBirds - numberOfNests;
-
+            Console.WriteLine("Example 2: " + numberOfBirds + " more birds than there are nests.");
 
 
             /*
@@ -33,39 +34,108 @@ namespace VariableNaming
             many raccoons are left in the woods?
             */
 
+            int racoonsInWoods = 3;
+            int racoonsGoHome = 2;
+            int racoonsLeft = racoonsInWoods - racoonsGoHome;
+            Console.WriteLine("Question 3: " + racoonsLeft + " racoons are left in the woods.");
+
+
             /*
             4. There are 5 flowers and 3 bees. How many less bees than flowers?
             */
+
+            int flowers = 5;
+            int bees = 3;
+            int flowersLessBees = flowers - bees;
+            Console.WriteLine("Question 4: " + flowersLessBees + " less bess than flowers.");
+
 
             /*
             5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
             breadcrumbs, too. How many pigeons are eating breadcrumbs now?
             */
 
+            int initialPigeons = 1;
+            int additionalPigeons = 1;
+            int totalPigeons = initialPigeons + additionalPigeons;
+            Console.WriteLine("Question 5: " + totalPigeons + " pigeons eating breadcrumbs now.");
+
+
             /*
             6. 3 owls were sitting on the fence. 2 more owls joined them. How many
             owls are on the fence now?
             */
+
+            int initialOwls = 3;
+            int additionalOwls = 2;
+            int totalOwls = initialOwls + additionalOwls;
+            Console.WriteLine("Question 6: " + totalOwls + " owls are on the fence now.");
+
 
             /*
             7. 2 beavers were working on their home. 1 went for a swim. How many
             beavers are still working on their home?
             */
 
+            int beaversWorking = 2;
+            int beaversLeaving = 1;
+            int beaversRemaining = beaversWorking - beaversLeaving;
+            Console.WriteLine("Question 7: " + beaversRemaining + " beavers are still working on their home.");
+
+
             /*
             8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
             many toucans in all?
             */
+
+            int initialToucans = 2;
+            int additionalToucans = 1;
+            int totalToucans = initialToucans + additionalToucans;
+            Console.WriteLine("Question 8: " + totalToucans + " toucans in all.");
+
 
             /*
             9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
             are there than nuts?
             */
 
+            int totalSquirrels = 4;
+            int totalNuts = 2;
+            int excessSquirrelsOverNuts = totalSquirrels - totalNuts;
+            Console.WriteLine("Question 9: " + excessSquirrelsOverNuts + " more squirrels than nuts.");
+
+
             /*
             10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
             she find?
             */
+
+            //Coin values:
+            decimal valueOfQuarter = 0.25M;
+            decimal valueOfDime = 0.10M;
+            decimal valueOfNickel = 0.05M;
+            decimal valueOfPenny = 0.01M;
+            decimal valueOfHalfDollar = 0.50M;
+
+            //Coin quantities:
+            int numberOfQuarters = 1;
+            int numberOfDimes = 1;
+            int numberOfNickels = 2;
+            int numberOfPennies = 0;
+            int numberOfHalfDollars = 0;
+
+            //Tabulation of total value:
+            decimal rawTotalValueOfCoins = valueOfQuarter * numberOfQuarters + valueOfDime * numberOfDimes +
+                valueOfNickel * numberOfNickels + valueOfPenny * numberOfPennies + valueOfHalfDollar * numberOfHalfDollars;
+
+            //Format result of total value:
+            string formattedValueOfCoins = String.Format("Question 10: {0:C} is the total value Mrs. Hilt found.",
+                rawTotalValueOfCoins);
+
+            //Display result:
+            Console.WriteLine(formattedValueOfCoins);
+
+
 
             /*
             11. Mrs. Hilt's favorite first grade classes are baking muffins. Mrs. Brier's
@@ -74,10 +144,28 @@ namespace VariableNaming
             grade bake in all?
             */
 
+            int mrsBriersMuffins = 18;
+            int mrsMacAdamsMuffins = 20;
+            int mrsFlannerysMuffins = 17;
+            int totalMuffins = mrsBriersMuffins + mrsMacAdamsMuffins + mrsFlannerysMuffins;
+            Console.WriteLine("Question 11: " + totalMuffins + " were baked in all by the first grade.");
+
+
             /*
             12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
             much did she spend in all for the two toys?
             */
+
+            decimal yoyoCost = 0.24M;
+            decimal whistleCost = 0.14M;
+            decimal rawTotalCostOfToys = yoyoCost + whistleCost;
+
+            //Format result of total cost:
+            string formattedTotalCostOfToys = String.Format("Question 12: {0:C} is the total amount Mrs. Hilt spent for the two toys.",
+                rawTotalCostOfToys);
+
+            //Display Result:
+            Console.WriteLine(formattedTotalCostOfToys);
 
             /*
             13. Mrs. Hilt made 5 Rice Krispie Treats. She used 8 large marshmallows
@@ -85,11 +173,19 @@ namespace VariableNaming
             altogether?
             */
 
+            int largeMarshmallowsUsed = 8;
+            int miniMarshmallowsUsed = 10;
+            int totalMarshmallowsUsed = largeMarshmallowsUsed + miniMarshmallowsUsed;
+            Console.WriteLine("Question 13: " + totalMarshmallowsUsed + " total marshmallows were used by Mrs. Hilt.");
+
+
             /*
             14. At Mrs. Hilt's house, there was 29 inches of snow, and Brecknock
             Elementary School received 17 inches of snow. How much more snow
             did Mrs. Hilt's house have?
             */
+
+
 
             /*
             15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
@@ -310,6 +406,7 @@ namespace VariableNaming
             Challenge: Display as an integer value between 0 and 100 using casts.
             */
 
+            Console.ReadLine();
         }
     }
 }
