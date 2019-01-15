@@ -122,13 +122,27 @@ You are encouraged to make "less" part of your standard command line toolkit.
 Did you remember to save "introduction-to-tools-exercise.txt"?
 
 $ git status
-<type or copy-paste the result here>
+<
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../introduction-to-tools-exercises.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+>
 
 $ git add -A
-<type or copy-paste the result here>
+<>
 
 $ git commit -m "Good stopping point"
-<type or copy-paste the result here>
+<
+[master cc5d157] Good stopping point
+ 1 file changed, 20 insertions(+), 7 deletions(-)
+>
 
 Note, you do not need to push this commit up to BitBucket at this time. The
 typical Git workflow is to make many small commits to your local repo while
@@ -144,8 +158,8 @@ along, and then at the end.
 ----
 
 $ cd Helloworld
-$ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+$ <pwd>
+</c/Users/grantp/grantpayne-c-sharp-exercises/module-1/01_Introduction_Tools/dotnet/csharp-helloworld/Helloworld>
 
 
 ----
@@ -153,7 +167,7 @@ $ <enter command to display present working directory>
     path?
 ----
 
-<type your answer here>
+<A relative path.>
 
 
 ----
@@ -161,8 +175,16 @@ $ <enter command to display present working directory>
     your present working directory.
 ----
 
-$ <enter command to list all files and directories including dot-files and dot-directories>
-<type or copy-paste the result here>
+$ < ls -al>
+<
+total 10
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 ./
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 ../
+-rw-r--r-- 1 grantp 197121  186 Jan 14 16:41 App.config
+-rw-r--r-- 1 grantp 197121 2712 Jan 14 16:41 Helloworld.csproj
+-rw-r--r-- 1 grantp 197121  266 Jan 14 16:41 Program.cs
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 Properties/
+>
 
 
 ----
@@ -171,13 +193,23 @@ $ <enter command to list all files and directories including dot-files and dot-d
     command.
 ----
 
-$ cp Program.cs Helloworld.cs.backup
+$ cp Program.cs Helloworld.cs.backup    //Should be "$ cp Program.cs Program.cs.backup"
 
 The "cp" parameters are the name of the source file followed by the name of the
 destination file.
 
-$ <enter command to list all files and directories in order to confirm the creation of the backup file>
-<type or copy-paste the result here>
+$ <ls -al>
+<
+total 11
+drwxr-xr-x 1 grantp 197121    0 Jan 14 20:54 ./
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 ../
+-rw-r--r-- 1 grantp 197121  186 Jan 14 16:41 App.config
+-rw-r--r-- 1 grantp 197121 2712 Jan 14 16:41 Helloworld.csproj
+-rw-r--r-- 1 grantp 197121  266 Jan 14 16:41 Program.cs
+-rw-r--r-- 1 grantp 197121  266 Jan 14 20:51 Program.cs.backup
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 Properties/
+
+>
 
 
 ----
@@ -190,8 +222,17 @@ $ mv Program.cs.backup Program.cs.copy
 The "mv" parameters are the existing name of the file followed by the new name
 of the file.
 
-$ <enter command to list all files and directories in order to confirm the renaming of the file>
-<type or copy-paste the result here>
+$ <ls -al>
+<
+total 11
+drwxr-xr-x 1 grantp 197121    0 Jan 14 20:55 ./
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 ../
+-rw-r--r-- 1 grantp 197121  186 Jan 14 16:41 App.config
+-rw-r--r-- 1 grantp 197121 2712 Jan 14 16:41 Helloworld.csproj
+-rw-r--r-- 1 grantp 197121  266 Jan 14 16:41 Program.cs
+drwxr-xr-x 1 grantp 197121    0 Jan 14 16:41 Properties/
+-rw-r--r-- 1 grantp 197121  266 Jan 14 20:51 Progam.cs.copy
+>
 
 
 ----
@@ -202,11 +243,28 @@ $ <enter command to list all files and directories in order to confirm the renam
     others on our teams.
 ----
 
-$ <enter the Git command to display status>
-<type or copy-paste the result here>
+$ <git status>
+<
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
 
-$ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   ../../introduction-to-tools-exercises.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Program.cs.copy
+
+no changes added to commit (use "git add" and/or "git commit -a")
+>
+
+$ <git add -A>
+<>
 
 $ <enter the Git command to save all "staged" changes>
 <type or copy-paste the result here>
