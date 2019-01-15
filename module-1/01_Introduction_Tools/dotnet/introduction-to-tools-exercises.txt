@@ -15,7 +15,8 @@ actual command from other text in Unix documentation.
     refer to?
 ----
 
-<type your response here>
+<The tilde represents the path equivalent to the current user's home directory.
+  In this specific case, it represents "C:/Users/grantp/".>
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on
@@ -24,7 +25,7 @@ actual command from other text in Unix documentation.
 ----
 
 $ pwd
-<type or copy-paste the result here>
+</c/Users/grantp/grantpayne-c-sharp-exercises/module-1/01_Introduction_Tools/dotnet/csharp-helloworld>
 
 The present working directory displayed should match the directory you changed
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -40,7 +41,12 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
+<total 12
+drwxr-xr-x 1 grantp 197121   0 Jan 14 16:41 ./
+drwxr-xr-x 1 grantp 197121   0 Jan 14 16:41 ../
+drwxr-xr-x 1 grantp 197121   0 Jan 14 16:41 database/
+drwxr-xr-x 1 grantp 197121   0 Jan 14 16:41 Helloworld/
+-rw-r--r-- 1 grantp 197121 998 Jan 14 16:41 Helloworld.sln>
 
 
 ----
@@ -48,14 +54,15 @@ $ ls -la
     Exercise 4 represent?
 ----
 
-<type your answer here>
+<These directories represent a self-reference (reference to the current directory location on disk,
+ and the location on disk of the current location's parent directory, respectively>
 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+<"Helloworld.sln">
 
 
 ----
@@ -63,7 +70,7 @@ $ ls -la
     the directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+<["./",  "../", "database/", "Helloworld/"]>
 
 
 ----
@@ -95,7 +102,13 @@ $ less database/pagila.sql
 
 You are encouraged to make "less" part of your standard command line toolkit.
 
-<type or copy-paste the first five lines of either file here>
+<
+1       PENELOPE        GUINESS 2006-02-15 09:34:33
+2       NICK    WAHLBERG        2006-02-15 09:34:33
+3       ED      CHASE   2006-02-15 09:34:33
+4       JENNIFER        DAVIS   2006-02-15 09:34:33
+5       JOHNNY  LOLLOBRIGIDA    2006-02-15 09:34:33
+>
 
 ----
 9.  This is good time to create a Git snapshot of your progress.  Usually,
