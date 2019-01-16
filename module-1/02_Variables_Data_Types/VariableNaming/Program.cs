@@ -26,7 +26,7 @@ namespace VariableNaming
             int numberOfBirds = 6;
             int numberOfNests = 3;
             int numberOfExtraBirds = numberOfBirds - numberOfNests;
-            Console.WriteLine("Example 2: " + numberOfBirds + " more birds than there are nests.");
+            Console.WriteLine("Example 2: " + numberOfExtraBirds + " more birds than there are nests.");
 
 
             /*
@@ -229,7 +229,7 @@ namespace VariableNaming
             int megansCurrentSeashells = 19;
             int megansSeashellGoal = 25;
             int megansSeashellsNeeded = megansSeashellGoal - megansCurrentSeashells;
-            Console.WriteLine("Question 17: " + megansSeashellsNeeded + " seashells are needed for Megan to have 25 in her collection");
+            Console.WriteLine("Question 17: " + megansSeashellsNeeded + " more seashells are needed for Megan to have 25 in her collection");
 
 
             /*
@@ -391,7 +391,7 @@ namespace VariableNaming
             int marksInitialTrees = 13;
             int marksAdditionalTrees = 12;
             int marksTotalTrees = marksInitialTrees + marksAdditionalTrees;
-            Console.WriteLine("Question 30: " + marksTotalTrees + "is how many trees Mark will have.");
+            Console.WriteLine("Question 30: " + marksTotalTrees + " is how many trees Mark will have.");
 
 
             /*
