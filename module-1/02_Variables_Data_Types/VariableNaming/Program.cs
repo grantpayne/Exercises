@@ -528,6 +528,11 @@ namespace VariableNaming
             prepare 276 oatmeal cookies at a time?
             */
 
+            decimal cookiesPerTray = 12.00M;
+            decimal cookesDesiredPerBatch = 276.00M;
+            decimal traysNeeded = (cookesDesiredPerBatch / cookiesPerTray);
+            //Used decimal type in tandem with Ceiling call to handle partial-tray situations
+            Console.WriteLine("Question 42: " + Math.Ceiling(traysNeeded) + " trays are needed.");
 
 
             /*
@@ -536,11 +541,25 @@ namespace VariableNaming
             servings of bite-sized pretzels was Marian able to prepare?
             */
 
+            int numberOfPretzelsMarianMade = 480;
+            int pretzelServingSize = 12;
+            int numberOfPretzelServingsPossible = numberOfPretzelsMarianMade / pretzelServingSize;
+            Console.WriteLine("Question 43: " + numberOfPretzelServingsPossible + " servings of pretzels can be prepared.");
+
+
             /*
             44. Lastly, she baked 53 lemon cupcakes for the children living in the city
             orphanage. If two lemon cupcakes were left at home, how many
             boxes with 3 lemon cupcakes each were given away?
             */
+
+            int totalLemonCupcakesBaked = 53;
+            int numberOfLemonCupcakesLeftHome = 2;
+            int numberOfLemonCupcakesGivenAway = totalLemonCupcakesBaked - numberOfLemonCupcakesLeftHome;
+            int numberOfLemonCupcakesPerBox = 3;
+            int numberOfLemonCupcakeBoxesGiven = numberOfLemonCupcakesGivenAway / numberOfLemonCupcakesPerBox;
+            Console.WriteLine("Question 44: " + numberOfLemonCupcakeBoxesGiven + " boxes of lemon cupcakes were given away.");
+
 
             /*
             45. Susie's mom prepared 74 carrot sticks for breakfast. If the carrots
@@ -548,17 +567,36 @@ namespace VariableNaming
             uneaten?
             */
 
+            int totalCarrotSticks = 74;
+            int numberOfPeopleEatingCarrotSticks = 12;
+            int numberOfCarrotSticksUneaten = totalCarrotSticks % numberOfPeopleEatingCarrotSticks;
+            Console.WriteLine("Question 45: " + numberOfCarrotSticksUneaten + " carrot sticks were left uneaten.");
+
+
             /*
             46. Susie and her sister gathered all 98 of their teddy bears and placed
             them on the shelves in their bedroom. If every shelf can carry a
             maximum of 7 teddy bears, how many shelves will be filled?
             */
 
+            int numberOfTeddyBears = 98;
+            int numberOfTeddyBearsPerShelf = 7;
+            int numberOfFullTeddyShelves = numberOfTeddyBears / numberOfTeddyBearsPerShelf;
+            Console.WriteLine("Question 46: " + numberOfFullTeddyShelves + " shelves will be completely filled.");
+
+
             /*
             47. Susie’s mother collected all family pictures and wanted to place all of
             them in an album. If an album can contain 20 pictures, how many
             albums will she need if there are 480 pictures?
             */
+
+            decimal photosPerAlbum = 20.00M;
+            decimal numberOfPhotosDesired = 480.00M;
+            decimal numberOfAlbumsNeeded = (numberOfPhotosDesired / photosPerAlbum);
+            //Used decimal type in tandem with Ceiling call to handle partial-album situations
+            Console.WriteLine("Question 47: " + Math.Ceiling(numberOfAlbumsNeeded) + " albums are needed.");
+
 
             /*
             48. Joe, Susie’s brother, collected all 94 trading cards scattered in his
@@ -567,16 +605,37 @@ namespace VariableNaming
             the unfilled box?
             */
 
+            int numberOfTradingCards = 94;
+            int numberOfTradingCardsPerBox = 8;
+            int numberOfBoxesFilled = numberOfTradingCards / numberOfTradingCardsPerBox;
+            int numberOfCardsInUnfilledBox = numberOfTradingCards % numberOfTradingCardsPerBox;
+
+            Console.WriteLine("Question 48: " + numberOfBoxesFilled + " boxes were filled and there were " +
+                numberOfCardsInUnfilledBox + " cards in the unfilled box.");
+
+
             /*
             49. Susie’s father repaired the bookshelves in the reading room. If he has
             210 books to be distributed equally on the 10 shelves he repaired,
             how many books will each shelf contain?
             */
 
+            int totalNumberOfBooks = 210;
+            int totalNumberOfShelves = 10;
+            int numberOfBooksPerShelf = totalNumberOfBooks / totalNumberOfShelves;
+            Console.WriteLine("Question 49: " + numberOfBooksPerShelf + " books will be contained on each shelf.");
+
+
             /*
             50. Cristina baked 17 croissants. If she planned to serve this equally to
             her seven guests, how many will each have?
             */
+
+            int numberOfCroissantsBaked = 17;
+            int numberOfGuestsEatingCroissants = 7;
+            int numberOfFullCroissantsPerGuest = numberOfCroissantsBaked / numberOfGuestsEatingCroissants;
+            Console.WriteLine("Question 50: " + numberOfFullCroissantsPerGuest + " full croissants for each guest.");
+
 
             /*
                 CHALLENGE PROBLEMS
