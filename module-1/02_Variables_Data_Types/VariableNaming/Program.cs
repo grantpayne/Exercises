@@ -648,6 +648,23 @@ namespace VariableNaming
             Challenge: How many days will it take the pair to paint 623 rooms assuming they work 8 hours a day?.
             */
 
+            decimal billsSquareFootagePerHour = (12M * 14M) / 2.15M;
+            decimal jillsSquareFootagePerHour = (12M * 14M) / 1.90M;
+            decimal combinedSquareFootagePerHour = billsSquareFootagePerHour + jillsSquareFootagePerHour;
+            decimal numberOfRoomsToPaint = 5M;
+            decimal squareFootagePerRoom = (12M * 14M);
+            decimal totalSquareFootageToPaint = numberOfRoomsToPaint * squareFootagePerRoom;
+            decimal combinedHoursToPaintRooms = totalSquareFootageToPaint / combinedSquareFootagePerHour;
+            decimal challengeNumberOfRoomsToPaint = 623M;
+            decimal challengeTotalSquareFootageToPaint = challengeNumberOfRoomsToPaint * squareFootagePerRoom;
+            decimal hoursInAWorkDay = 8M;
+            decimal challengeDaysToComplete = challengeTotalSquareFootageToPaint / combinedSquareFootagePerHour / hoursInAWorkDay;
+            Console.WriteLine("Challenge Question 1: " + combinedHoursToPaintRooms + " hours to paint 5 rooms and it would take " +
+                challengeDaysToComplete + " work days to paint 623 rooms.");
+
+
+
+
             /*
             Create and assign variables to hold your first name, last name, and middle initial. Using concatenation,
             build an additional variable to hold your full name in the order of last name, first name, middle initial. The
@@ -656,12 +673,29 @@ namespace VariableNaming
             Example: "Hopper, Grace B."
             */
 
+            string myFirstName = "Grant";
+            string myLastName = "Payne";
+            string myMiddleInitial = "D.";
+            string myFullName = myLastName + ", " + myFirstName + " " + myMiddleInitial;
+            Console.WriteLine("Challenge Question 2: " + myFullName);
+
+
+
             /*
             The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
             What percentage of the trip has been completed?
             Hint: The percent completed is the miles already travelled divided by the total miles.
             Challenge: Display as an integer value between 0 and 100 using casts.
             */
+
+            decimal totalDistanceOfTrainTrip = 800.00M;
+            decimal currentDistanceTrainCompleted = 537.00M;
+            decimal percentageOfTrainTripCompleted = (currentDistanceTrainCompleted / totalDistanceOfTrainTrip) * 100;
+
+            /*Displays result as a casted integer percentage representation of the decimal result variable:
+              --NOTE:  This could be done more accurately by calling Math.Round() instead of casting (int)  
+            */
+            Console.WriteLine("Challenge Question #3 " + (int)(percentageOfTrainTripCompleted) + "% of the trip has been completed.");
 
             Console.ReadLine();
         }
