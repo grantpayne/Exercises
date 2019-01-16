@@ -185,6 +185,11 @@ namespace VariableNaming
             did Mrs. Hilt's house have?
             */
 
+            int snowAtBrecknockElementary = 17;
+            int snowAtMrsHiltsHouse = 29;
+            int excessSnowAtMrsHiltsHouse = snowAtMrsHiltsHouse - snowAtBrecknockElementary;
+            Console.WriteLine("Question 14: " + excessSnowAtMrsHiltsHouse + " more inches of snow fell at Mrs. Hilt's " +
+                "house than at Brecknock Elementary.");
 
 
             /*
@@ -192,34 +197,89 @@ namespace VariableNaming
             case. How much money does she have left?
             */
 
+            decimal mrsHiltsMoney = 10.00M;
+            decimal costOfToyTruck = 3.00M;
+            decimal costOfPencil = 2.00M;
+            decimal rawMrsHiltsMoneyAfterPurchase = mrsHiltsMoney - costOfToyTruck - costOfPencil;
+
+            //Format money remaining:
+            string formattedMrsHiltsMoneyAfterPurchase = String.Format("Question 15: {0:C} is how much money Mrs. Hilt has left.",
+                rawMrsHiltsMoneyAfterPurchase);
+
+            //Display money remaining:
+            Console.WriteLine(formattedMrsHiltsMoneyAfterPurchase);
+
+
             /*
             16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
             marbles does he have now?
             */
+
+            int marblesInJoshsCollection = 16;
+            int marblesJoshLost = 7;
+            int marblesRemainingInJoshsCollection = marblesInJoshsCollection - marblesJoshLost;
+            Console.WriteLine("Question 16: " + marblesRemainingInJoshsCollection + " marbles remain in Josh's collection.");
+
 
             /*
             17. Megan has 19 seashells. How many more seashells does she need to
             find to have 25 seashells in her collection?
             */
 
+            int megansCurrentSeashells = 19;
+            int megansSeashellGoal = 25;
+            int megansSeashellsNeeded = megansSeashellGoal - megansCurrentSeashells;
+            Console.WriteLine("Question 17: " + megansSeashellsNeeded + " seashells are needed for Megan to have 25 in her collection");
+
+
             /*
             18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
             many green balloons does Brad have?
             */
+
+            int bradsTotalBalloons = 17;
+            int bradsRedBalloons = 8;
+            int bradsGreenBalloons = bradsTotalBalloons - bradsRedBalloons;
+            Console.WriteLine("Question 18: " + bradsGreenBalloons + " is how many green balloons Brad has.");
+
 
             /*
             19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
             How many books are on the shelf now?
             */
 
+            int initialBooksOnShelf = 38;
+            int additionalBooksOnShelf = 10;
+            int totalBooksOnShelf = initialBooksOnShelf + additionalBooksOnShelf;
+            Console.WriteLine("Question 19: " + totalBooksOnShelf + " books are on the shelf now.");
+
+
             /*
             20. A bee has 6 legs. How many legs do 8 bees have?
             */
+
+            int legsPerBee = 6;
+            int numberOfBees = 8;
+            int totalBeeLegs = legsPerBee * numberOfBees;
+            Console.WriteLine("Question 20: " + totalBeeLegs + " is how many legs 8 bees have in total.");
+
 
             /*
             21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
             cream cones cost?
             */
+
+            decimal costOfIceCreamCone = 0.99M;
+            int numberOfIceCreamCones = 2;
+            decimal rawTotalCostOfIceCreamCones = costOfIceCreamCone * numberOfIceCreamCones;
+
+            //Format total cost of ice cream cones:
+            string formattedTotalCostOfIceCreamCones = String.Format("Question 21: {0} ice cream cones would cost {1:C}.",
+                numberOfIceCreamCones, rawTotalCostOfIceCreamCones);
+
+            //Display result:
+            Console.WriteLine(formattedTotalCostOfIceCreamCones);
+
 
             /*
             22. Mrs. Hilt wants to make a border around her garden. She needs 125
@@ -227,15 +287,32 @@ namespace VariableNaming
             does she need to complete the border?
             */
 
+            int rocksRequiredToCompleteTotal = 125;
+            int currentRocksPossessed = 64;
+            int AdditionalRocksNeeded = rocksRequiredToCompleteTotal - currentRocksPossessed;
+            Console.WriteLine("Question 22: " + AdditionalRocksNeeded + " more rocks are needed to complete the border.");
+
             /*
             23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
             she have left?
             */
 
+            int mrsHiltsInitialMarbles = 38;
+            int marblesMrsHiltLost = 15;
+            int mrsHiltsMarblesRemaining = mrsHiltsInitialMarbles - marblesMrsHiltLost;
+            Console.WriteLine("Question 23: " + mrsHiltsMarblesRemaining + " is how many marbles Mrs. Hilt has left.");
+
+
             /*
             24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
             miles and then stopped for gas. How many miles did they have left to drive?
             */
+
+            int totalMilesOfTrip = 78;
+            int milesDroveBeforeStop = 32;
+            int milesLeftToDrive = totalMilesOfTrip - milesDroveBeforeStop;
+            Console.WriteLine("Question 24: " + milesLeftToDrive + " miles were left to drive.");
+
 
             /*
             25. Mrs. Hilt spent 1 hour and 30 minutes shoveling snow on Saturday
@@ -243,15 +320,40 @@ namespace VariableNaming
             much total time did she spend shoveling snow?
             */
 
+            double hoursSpentShovelingSatMorning = ((1.000) + (30.000 / 60.000));
+            double hoursSpentShovelingSatAfternoon = (0.000) + (45.000 / 60.000);
+            double totalHoursSpentShoveling = hoursSpentShovelingSatMorning + hoursSpentShovelingSatAfternoon;
+            Console.WriteLine("Question 25: " + totalHoursSpentShoveling + " total hours were spent shoveling by Mrs. Hilt");
+
+
             /*
             26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
             money did she pay for all of the hot dogs?
             */
 
+            int numberOfHotDogsPurchased = 6;
+            decimal priceOfHotDog = 0.50M;
+            decimal rawTotalPaidForHotDogs = numberOfHotDogsPurchased * priceOfHotDog;
+
+            //Format amount paid for hot dogs:
+            string formattedTotalPaidForHotDogs = String.Format("Question 26: Mrs. Hilt paid {0:C} for {1} hot dogs.",
+                rawTotalPaidForHotDogs, numberOfHotDogsPurchased);
+
+            //Display amount paid for hot dogs:
+            Console.WriteLine(formattedTotalPaidForHotDogs);
+
+
             /*
             27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
             she buy with the money she has?
             */
+
+            decimal mrsHiltsMoneyForPencils = 0.50M;
+            decimal costOfEachPencil = 0.07M;
+            int numberOfPencilsAffordable = (int)(mrsHiltsMoneyForPencils / costOfEachPencil);
+
+            Console.WriteLine("Question 27: " + numberOfPencilsAffordable + " pencils can be bought with the money Mr. Hilt has.");
+
 
             /*
             28. Mrs. Hilt saw 33 butterflies. Some of the butterflies were red and others
@@ -259,60 +361,142 @@ namespace VariableNaming
             were red?
             */
 
+            int totalButterfliesSeen = 33;
+            int orangeButterflies = 20;
+            int redButterflies = totalButterfliesSeen - orangeButterflies;
+            Console.WriteLine("Question 28: " + redButterflies + " of the butterflies were red.");
+
+
             /*
             29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
             should Kate get back?
             */
+
+            decimal moneyKateGaveToClerk = 1.00M;
+            decimal costOfCandy = 0.54M;
+            decimal rawKatesChangeBack = moneyKateGaveToClerk - costOfCandy;
+
+            //Format amount Kate recieves
+            string formattedKatesChangeBack = String.Format("Question 29: Kate should get back {0:C}.", rawKatesChangeBack);
+
+            //Display Result
+            Console.WriteLine(formattedKatesChangeBack);
+
 
             /*
             30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
             will he have?
             */
 
+            int marksInitialTrees = 13;
+            int marksAdditionalTrees = 12;
+            int marksTotalTrees = marksInitialTrees + marksAdditionalTrees;
+            Console.WriteLine("Question 30: " + marksTotalTrees + "is how many trees Mark will have.");
+
+
             /*
             31. Joy will see her grandma in two days. How many hours until she sees
             her?
             */
+
+            int hoursPerDay = 24;
+            double daysTillJoySeesGrandma = 2.000;
+            double hoursTillJoySeesGrandma = hoursPerDay * daysTillJoySeesGrandma;
+            Console.WriteLine("Question 31: " + hoursTillJoySeesGrandma + " hours until Joy sees her grandma.");
+
 
             /*
             32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
             much gum will she need?
             */
 
+            int numberOfKimsCousins = 4;
+            int piecesOfGumToGiveEachCousin = 5;
+            int totalPiecesOfGumNeeded = numberOfKimsCousins * piecesOfGumToGiveEachCousin;
+            Console.WriteLine("Question 32: " + totalPiecesOfGumNeeded + " pieces of gum are needed for Kim to give out.");
+
+
             /*
             33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
             left?
             */
+
+            decimal dansInitialMoney = 3.00M;
+            decimal costOfCandyBar = 1.00M;
+            decimal rawDansRemainingMoney = dansInitialMoney - costOfCandyBar;
+
+            //Format Dan's remaining money:
+            string formattedDansRemainingMoney = String.Format("Question 33: Dan has {0:C} left.", rawDansRemainingMoney);
+
+            //Display Dan's remaining money:
+            Console.WriteLine(formattedDansRemainingMoney);
+
 
             /*
             34. 5 boats are in the lake. Each boat has 3 people. How many people are
             on boats in the lake?
             */
 
+            int numberOfBoatsInLake = 5;
+            int peoplePerBoat = 3;
+            int totalPeopleOnBoatsInLake = numberOfBoatsInLake * peoplePerBoat;
+            Console.WriteLine("Question 34: " + totalPeopleOnBoatsInLake + " people are on boats in the lake.");
+
+
             /*
             35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
             have now?
             */
+
+            int ellensInitialLegoCount = 380;
+            int ellensLostLegoCount = 57;
+            int ellensFinalLegoCount = ellensInitialLegoCount - ellensLostLegoCount;
+            Console.WriteLine("Question 35: " + ellensFinalLegoCount + " is how many legos Ellen has now.");
+
 
             /*
             36. Arthur baked 35 muffins. How many more muffins does Arthur have to
             bake to have 83 muffins?
             */
 
+            int arthursBakedMuffinCount = 35;
+            int arthursBakedMuffinGoal = 83;
+            int arthersBakedMuffinsNeeded = arthursBakedMuffinGoal - arthursBakedMuffinCount;
+            Console.WriteLine("Question 36: " + arthersBakedMuffinsNeeded + " muffins are needed to be baked." );
+
+
             /*
             37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
             crayons does Willy have then Lucy?
             */
+
+            int willysCrayonCount = 1400;
+            int lucysCrayonCount = 290;
+            int willysExcessCrayonsOverLucy = willysCrayonCount - lucysCrayonCount;
+            Console.WriteLine("Question 37: " + willysExcessCrayonsOverLucy + " is how many more crayons Willy has than Lucy.");
+
 
             /*
             38. There are 10 stickers on a page. If you have 22 pages of stickers, how
             many stickers do you have?
             */
 
+            int stickersPerPage = 10;
+            int pageOfStickersCount = 22;
+            int totalStickerCount = stickersPerPage * pageOfStickersCount;
+            Console.WriteLine("Question 38: " + totalStickerCount + " is how many stickers you have.");
+
+
             /*
             39. There are 96 cupcakes for 8 children to share. How much will each
             person get if they share the cupcakes equally?
             */
+
+            double cupcakeCount = 96.00;
+            int numberOfChildren = 8;
+            double cupcakesPerPerson = cupcakeCount / numberOfChildren;
+            Console.WriteLine("Question 39: " + cupcakesPerPerson + " is how many cupcakes each person will get.");
+
 
             /*
             40. She made 47 gingerbread cookies which she will distribute equally in
@@ -320,17 +504,31 @@ namespace VariableNaming
             cookies will not be placed in a jar?
             */
 
+            int gingerbreadCookieCount = 47;
+            int cookiesPerJar = 6;
+            int numberOfExtraCookies = gingerbreadCookieCount % cookiesPerJar;
+            Console.WriteLine("Question 40: " + numberOfExtraCookies + " cookies will not be placed in a jar.");
+
+
             /*
             41. She also prepared 59 croissants which she plans to give to her 8
             neighbors. If each neighbor received and equal number of croissants,
             how many will be left with Marian?
             */
 
+            int totalNumberOfCroissants = 59;
+            int numberOfNeighbors = 8;
+            int leftoverCroissantCount = totalNumberOfCroissants % numberOfNeighbors;
+            Console.WriteLine("Question 41: " + leftoverCroissantCount + " croissants will be left with Marian.");
+
+
             /*
             42. Marian also baked oatmeal cookies for her classmates. If she can
             place 12 cookies on a tray at a time, how many trays will she need to
             prepare 276 oatmeal cookies at a time?
             */
+
+
 
             /*
             43. Marian’s friends were coming over that afternoon so she made 480
