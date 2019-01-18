@@ -32,7 +32,7 @@ namespace Exercises
                     isThereFour = true;
                 }
             }
-            if (isThereOne == true || isThereFour == true)
+            if (isThereOne == true && isThereFour == true)
             {
                 return false;
             }

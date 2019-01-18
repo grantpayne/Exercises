@@ -16,7 +16,24 @@ namespace Exercises
          */
         public int Start1(int[] a, int[] b)
         {
-            return 0;
+            int counter = 0;
+            if (a.Length > 0)
+            {
+                if (a[0] == 1)
+                {
+                    counter++;
+                }
+            }
+            if (b.Length > 0)
+            {
+                if (b[0] == 1)
+                {
+                    counter++;
+
+                    
+                }
+            }
+            return counter;
         }
     }
 }

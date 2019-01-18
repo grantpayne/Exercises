@@ -19,18 +19,10 @@ namespace Exercises
         */
         public bool EvenlySpaced(int a, int b, int c)
         {
-            int difference = (b - a);
-            if (difference < 0)
-            {
-                difference *= -1;
-            }
-            if (c == b + difference || c == a - difference || difference == c)
-            {
-                return true;
-            }
-            return false;
+            int[] arr = { a, b, c };
+            Array.Sort(arr);
 
-            
+            return (arr[0] + arr[2]) / 2.0 == arr[1];
 
             
         }
