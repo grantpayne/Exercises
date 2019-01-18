@@ -18,7 +18,32 @@ namespace Exercises
          */
         public bool No14(int[] nums)
         {
-            return false;
+            bool isThereOne = false;
+            bool isThereFour = false;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                if (nums[i] == 1)
+                {
+                    isThereOne = true;
+                }
+                else if (nums[i] == 4)
+                {
+                    isThereFour = true;
+                }
+            }
+            if (isThereOne == true || isThereFour == true)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+    
+
+           //return !(isThereOne || isThereFour);
         }
     }
 }
