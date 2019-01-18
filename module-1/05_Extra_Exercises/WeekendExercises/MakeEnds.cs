@@ -17,7 +17,10 @@ namespace Exercises
          */
         public int[] MakeEnds(int[] nums)
         {
-            return new int[] { };
+            int[] arr = new int[2];
+            arr[0] = nums[0];
+            arr[1] = nums[nums.Length - 1];
+            return arr;
         }
     }
 }

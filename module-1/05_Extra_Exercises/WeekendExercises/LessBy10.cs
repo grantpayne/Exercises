@@ -16,7 +16,23 @@ namespace Exercises
          */
         public bool LessBy10(int a, int b, int c)
         {
-            return false;
+            if (a - b >= 10 || b - a >= 10)
+            {
+                return true;
+            }
+            else if (b - c >= 10 || c - b >= 10)
+            {
+                return true;
+            }
+            else if (a - c >= 10 || c - a >= 10)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
 
