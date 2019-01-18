@@ -16,7 +16,51 @@ namespace Exercises
          */
         public bool Array123(int[] nums)
         {
+            if (nums.Length < 3)
+            {
+                return false;
+            }
+            for (int i = 2; i < nums.Length; i++)
+            {
+                if (nums[i - 2] == 1 && nums[i - 1] == 2 && nums[i] == 3)
+                {
+                    return true;
+                }
+                
+            }
             return false;
+            
+            //////////////////////////////////////////////////////////////////////////
+            //More Verbose solution - which is better? Both of these solutions pass the tests.
+            
+            /*
+            if (nums.Length < 3)
+            {
+                return false;
+            }
+
+            if (nums[0] == 1 && nums[1] == 2 && nums[2] == 3)
+            {
+                return true;
+            }
+
+            int value1InSequence = nums[0];
+            int value2InSequence = nums[1];
+            int value3InSequence = nums[2];
+
+            for (int i = 3; i < nums.Length; i++)
+            {
+                value1InSequence = value2InSequence;
+                value2InSequence = value3InSequence;
+                value3InSequence = nums[i];
+                if (value1InSequence == 1 && value2InSequence == 2 && value3InSequence == 3)
+                {
+                    return true;
+                }
+            }
+            return false;
+            */
+
         }
     }
 }
