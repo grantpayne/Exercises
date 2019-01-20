@@ -12,6 +12,7 @@ namespace Fibonacci
             {
             Fibonacci(inputNumber);
             Console.WriteLine();
+            Console.Write("Please enter the Fibonacci number: ");
             inputNumber = int.Parse(Console.ReadLine());
             }
 
@@ -26,12 +27,6 @@ namespace Fibonacci
             {
                 Console.WriteLine(num1);
             }
-            /*
-            else if (input == 1)
-            {
-                Console.WriteLine(num1 + ", " + num2);
-            }
-            */
             else
             {
                 int nextFib = num1 + num2;
@@ -48,7 +43,7 @@ namespace Fibonacci
             
         }
 
-        /* Recursive Method///////////////////////////////////////////////////////////////////////////////////
+        /* Recursive Method (possible, but deemed not practical due to computing time becoming excessive at large numbers:
         static int Fibonacci(int input)
         {
             int result = 0;
