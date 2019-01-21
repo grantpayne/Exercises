@@ -17,7 +17,10 @@ namespace Exercises
          */
         public string NonStart(string a, string b)
         {
-            return null;
+            a = a.Substring(1);
+            b = b.Substring(1);
+
+            return a + b;
         }
     }
 }

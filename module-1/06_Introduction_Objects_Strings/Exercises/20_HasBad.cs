@@ -18,7 +18,17 @@ namespace Exercises
          */
         public bool HasBad(string str)
         {
+
+            if (str.Contains("bad"))
+            {
+                if (str.IndexOf("bad") <= 1)
+                {
+                    return true;
+                }
+            }
             return false;
+
+            
         }
     }
 }
