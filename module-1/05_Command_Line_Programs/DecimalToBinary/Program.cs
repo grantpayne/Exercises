@@ -15,7 +15,7 @@ namespace DecimalToBinary
             }
             Console.ReadLine();
         }
-        static String BinaryConvert(int input)
+        static string BinaryConvert(int input)
         {
             string result = "";
             while (input >= 1)
