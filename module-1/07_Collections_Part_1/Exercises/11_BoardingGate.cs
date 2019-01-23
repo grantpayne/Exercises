@@ -24,6 +24,12 @@ namespace Exercises
             Queue<int> midRange = new Queue<int>();
             Queue<int> upperRange = new Queue<int>();
 
+            Queue<Queue<int>> totalRange = new Queue<Queue<int>>();
+            totalRange.Enqueue(lowerRange);
+            totalRange.Enqueue(midRange);
+            totalRange.Enqueue(upperRange);
+
+
             List<int> groupedIntegers = new List<int>();
 
             for (int i = 0; i < seatNumberList.Count; i++)
@@ -47,19 +53,14 @@ namespace Exercises
                 }
             }
 
-            while (lowerRange.Count > 0)
+            while (totalRange.Count > 0)
             {
-                groupedIntegers.Add(lowerRange.Dequeue());
-            }
+                Queue<int> tmp = totalRange.Dequeue();
+                while (tmp.Count > 0)
+                {
+                    groupedIntegers.Add(tmp.Dequeue());
+                }
 
-            while (midRange.Count > 0)
-            {
-                groupedIntegers.Add(midRange.Dequeue());
-            }
-
-            while (upperRange.Count > 0)
-            {
-                groupedIntegers.Add(upperRange.Dequeue());
             }
 
             return groupedIntegers;
