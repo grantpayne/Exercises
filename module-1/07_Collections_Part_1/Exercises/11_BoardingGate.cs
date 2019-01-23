@@ -20,7 +20,49 @@ namespace Exercises
          */
         public List<int> BoardingGate(List<int> seatNumberList)
         {
-            return null;
+            Queue<int> lowerRange = new Queue<int>();
+            Queue<int> midRange = new Queue<int>();
+            Queue<int> upperRange = new Queue<int>();
+
+            List<int> groupedIntegers = new List<int>();
+
+            for (int i = 0; i < seatNumberList.Count; i++)
+            {
+                if (seatNumberList[i] < 1 || seatNumberList[i] > 30)
+                {
+                    seatNumberList.RemoveAt(i);
+                    i--;
+                }
+                else if (seatNumberList[i] >= 1 && seatNumberList[i] <= 10)
+                {
+                    lowerRange.Enqueue(seatNumberList[i]);
+                }
+                else if (seatNumberList[i] >= 11 && seatNumberList[i] <= 20)
+                {
+                    midRange.Enqueue(seatNumberList[i]);
+                }
+                else if (seatNumberList[i] >= 21 && seatNumberList[i] <= 30)
+                {
+                    upperRange.Enqueue(seatNumberList[i]);
+                }
+            }
+
+            while (lowerRange.Count > 0)
+            {
+                groupedIntegers.Add(lowerRange.Dequeue());
+            }
+
+            while (midRange.Count > 0)
+            {
+                groupedIntegers.Add(midRange.Dequeue());
+            }
+
+            while (upperRange.Count > 0)
+            {
+                groupedIntegers.Add(upperRange.Dequeue());
+            }
+
+            return groupedIntegers;
         }
     }
 }

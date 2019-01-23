@@ -16,7 +16,14 @@ namespace Exercises
          */
         public string[] List2Array(List<string> stringList)
         {
-            return null;
+            string[] myArray = new string[stringList.Count];
+
+            for (int i = 0; i < stringList.Count; i++)
+            {
+                myArray[i] = stringList[i];
+            }
+
+            return myArray;
         }
     }
 }
