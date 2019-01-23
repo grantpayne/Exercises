@@ -18,10 +18,7 @@ namespace Exercises
         {
             string[] myArray = new string[stringList.Count];
 
-            for (int i = 0; i < stringList.Count; i++)
-            {
-                myArray[i] = stringList[i];
-            }
+            stringList.CopyTo(myArray);
 
             return myArray;
         }
