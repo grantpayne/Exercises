@@ -17,7 +17,13 @@ namespace Exercises
          */
         public string GetPartialString(string a, string b)
         {
-            if (a.Length == 0)
+            //fixed bug here that occurs when BOTH strings are empty by 
+            //inserting the following if statement prior to existing chain:
+            if (a.Length == 0 && b.Length == 0)
+            {
+                return "";
+            }
+            else if (a.Length == 0)
             {
                 return b.Substring(1);
             }
@@ -29,6 +35,7 @@ namespace Exercises
             {
                 return a.Substring(1) + b.Substring(1);
             }
+
         }
     }
 }
