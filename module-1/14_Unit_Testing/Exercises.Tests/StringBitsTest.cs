@@ -34,8 +34,8 @@ namespace Exercises.Tests
         {
             StringBits stringBits = new StringBits();
             Assert.IsNotNull(stringBits);
-            string result = stringBits.GetBits("The Quick Brown Fox Jumped Over The Lazy Dog.");
-            Assert.AreEqual("TeQikBonFxJme vrTeLz o.", result);
+            string result = stringBits.GetBits("The Quick Brown Fox Jumps Over The Lazy Dog.");
+            Assert.AreEqual("TeQikBonFxJmsOe h ayDg", result);
         }
     }
 }
