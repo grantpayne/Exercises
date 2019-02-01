@@ -26,8 +26,11 @@ namespace Exercises
             {
                 return "Buzz";
             }
+            else
+            {
+                return input.ToString();
+            }
 
-            else return "nothing";
         }
     }
 }
