@@ -8,5 +8,13 @@ namespace Exercises
 {
     public class KataPrimeFactors
     {
+
+        public List<int> FindPrimeFactors(int input)
+        {
+            List<int> result = new List<int>();
+
+            return result;
+        }
+
     }
 }
