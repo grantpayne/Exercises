@@ -23,20 +23,20 @@ namespace Exercises.Tests
             CollectionAssert.AreEquivalent(new List<int> { 2 }, result);
         }
         [TestMethod]
+        public void FindPrimeFactorsTestFor1()
+        {
+            KataPrimeFactors kataPrimeFactors = new KataPrimeFactors();
+            List<int> result = new List<int>();
+            result = kataPrimeFactors.FindPrimeFactors(1);
+            CollectionAssert.AreEquivalent(new List<int> {  }, result);
+        }
+        [TestMethod]
         public void FindPrimeFactorsTestFor3()
         {
             KataPrimeFactors kataPrimeFactors = new KataPrimeFactors();
             List<int> result = new List<int>();
             result = kataPrimeFactors.FindPrimeFactors(3);
             CollectionAssert.AreEquivalent(new List<int> { 3 }, result);
-        }
-        [TestMethod]
-        public void FindPrimeFactorsTestFor1()
-        {
-            KataPrimeFactors kataPrimeFactors = new KataPrimeFactors();
-            List<int> result = new List<int>();
-            result = kataPrimeFactors.FindPrimeFactors(1);
-            CollectionAssert.AreEquivalent(new List<int> { 1 }, result);
         }
     }
 }
