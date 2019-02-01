@@ -14,7 +14,8 @@ namespace Exercises
             {
                 return "";
             }
-            else if (input % 3 == 0 && input % 5 == 0)
+            else if ((input % 3 == 0 && input % 5 == 0)
+                || (input.ToString().Contains('3') && input.ToString().Contains('5')))
             {
                 return "FizzBuzz";
             }
