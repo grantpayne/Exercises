@@ -22,6 +22,10 @@ namespace Exercises
             {
                 return "Fizz";
             }
+            else if (input % 5 == 0)
+            {
+                return "Buzz";
+            }
 
             else return "nothing";
         }
