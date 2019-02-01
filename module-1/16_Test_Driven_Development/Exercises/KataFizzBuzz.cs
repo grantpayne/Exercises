@@ -18,6 +18,10 @@ namespace Exercises
             {
                 return "FizzBuzz";
             }
+            else if (input % 3 == 0)
+            {
+                return "Fizz";
+            }
 
             else return "nothing";
         }

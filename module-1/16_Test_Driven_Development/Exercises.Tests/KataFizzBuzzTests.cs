@@ -42,6 +42,20 @@ namespace Exercises.Tests
             result = kataFizzBuzz.FizzBuzz(90);
             Assert.AreEqual("FizzBuzz", result);
         }
+        [TestMethod]
+        public void FizzBuzzTestForFizzCases()
+        {
+            KataFizzBuzz kataFizzBuzz = new KataFizzBuzz();
+            string result;
+            result = kataFizzBuzz.FizzBuzz(3);
+            Assert.AreEqual("Fizz", result);
+            result = kataFizzBuzz.FizzBuzz(6);
+            Assert.AreEqual("Fizz", result);
+            result = kataFizzBuzz.FizzBuzz(66);
+            Assert.AreEqual("Fizz", result);
+            result = kataFizzBuzz.FizzBuzz(99);
+            Assert.AreEqual("Fizz", result);
+        }
 
 
     }
