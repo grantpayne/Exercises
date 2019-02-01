@@ -12,7 +12,14 @@ namespace Exercises
         public List<int> FindPrimeFactors(int input)
         {
             List<int> result = new List<int>();
-
+            for (int i = 2; i <= input; i++)
+            {
+                while (input % i == 0)
+                {
+                    result.Add(i);
+                    input /= i;
+                }
+            }
             return result;
         }
 
