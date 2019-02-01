@@ -18,6 +18,10 @@ namespace Exercises.Tests
             KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
             string result = kataRomanNumerals.ConvertToRomanNumeral(1);
             Assert.AreEqual("I", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(2);
+            Assert.AreEqual("II", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(3);
+            Assert.AreEqual("III", result);
         }
 
     }

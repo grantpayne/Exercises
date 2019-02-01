@@ -10,7 +10,14 @@ namespace Exercises
     {
         public string ConvertToRomanNumeral(int n)
         {
-            return "Roman Numeral Here";
+            string result = "";
+
+            string[] ones = { "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
+
+            result += ones[n % 10];
+
+            return result;
+
         }
     }
 }
