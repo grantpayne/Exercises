@@ -80,11 +80,11 @@ namespace Exercises.Tests
             Assert.AreEqual("Buzz", result);
             result = kataFizzBuzz.FizzBuzz(100);
             Assert.AreEqual("Buzz", result);
-            result = kataFizzBuzz.FizzBuzz(51);
+            result = kataFizzBuzz.FizzBuzz(52);
             Assert.AreEqual("Buzz", result);
-            result = kataFizzBuzz.FizzBuzz(54);
+            result = kataFizzBuzz.FizzBuzz(59);
             Assert.AreEqual("Buzz", result);
-            result = kataFizzBuzz.FizzBuzz(57);
+            result = kataFizzBuzz.FizzBuzz(56);
             Assert.AreEqual("Buzz", result);
 
         }
