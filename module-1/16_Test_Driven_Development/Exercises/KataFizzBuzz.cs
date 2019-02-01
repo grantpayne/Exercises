@@ -10,7 +10,12 @@ namespace Exercises
     {
         public string FizzBuzz(int input)
         {
-            return "Hello World";
+            if (input <= 0 || input > 100)
+            {
+                return "";
+            }
+
+            else return "nothing";
         }
     }
 }
