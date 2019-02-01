@@ -38,5 +38,14 @@ namespace Exercises.Tests
             result = kataPrimeFactors.FindPrimeFactors(3);
             CollectionAssert.AreEquivalent(new List<int> { 3 }, result);
         }
+        [TestMethod]
+        public void FindPrimeFactorsTestFor4()
+        {
+            KataPrimeFactors kataPrimeFactors = new KataPrimeFactors();
+            List<int> result = new List<int>();
+            result = kataPrimeFactors.FindPrimeFactors(4);
+            CollectionAssert.AreEquivalent(new List<int> { 2, 2 }, result);
+        }
+
     }
 }
