@@ -62,6 +62,14 @@ namespace Exercises.Tests
             result = kataPrimeFactors.FindPrimeFactors(101);
             CollectionAssert.AreEquivalent(new List<int> { 101 }, result);
         }
+        [TestMethod]
+        public void FindPrimeFactorsTestFor5000000()
+        {
+            KataPrimeFactors kataPrimeFactors = new KataPrimeFactors();
+            List<int> result = new List<int>();
+            result = kataPrimeFactors.FindPrimeFactors(5000000);
+            CollectionAssert.AreEquivalent(new List<int> { 2, 2, 2, 2, 2, 2, 5, 5, 5, 5, 5, 5, 5 }, result);
+        }
 
     }
 }
