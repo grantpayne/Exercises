@@ -41,6 +41,10 @@ namespace Exercises.Tests
             Assert.AreEqual("FizzBuzz", result);
             result = kataFizzBuzz.FizzBuzz(90);
             Assert.AreEqual("FizzBuzz", result);
+            result = kataFizzBuzz.FizzBuzz(35);
+            Assert.AreEqual("FizzBuzz", result);
+            result = kataFizzBuzz.FizzBuzz(53);
+            Assert.AreEqual("FizzBuzz", result);
         }
         [TestMethod]
         public void FizzBuzzTestForFizzCases()
