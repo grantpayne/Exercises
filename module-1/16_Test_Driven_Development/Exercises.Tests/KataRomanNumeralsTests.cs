@@ -104,6 +104,20 @@ namespace Exercises.Tests
             result = kataRomanNumerals.ConvertToRomanNumeral(3999);
             Assert.AreEqual("MMMCMXCIX", result);
         }
+        [TestMethod]
+        public void ConvertToRomanNumeralTestInputOutOfRange()
+        {
+            KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
+            string result = kataRomanNumerals.ConvertToRomanNumeral(-1);
+            Assert.AreEqual("Value out of Range.  Please enter a number in the range 0-3999", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(-234234);
+            Assert.AreEqual("Value out of Range.  Please enter a number in the range 0 - 3999", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(4000);
+            Assert.AreEqual("Value out of Range.  Please enter a number in the range 0 - 3999", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(12423432);
+            Assert.AreEqual("Value out of Range.  Please enter a number in the range 0-3999", result);
+            
+        }
 
     }
 }
