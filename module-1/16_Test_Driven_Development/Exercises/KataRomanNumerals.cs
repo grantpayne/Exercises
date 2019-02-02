@@ -26,11 +26,16 @@ namespace Exercises
             }
             else
             {
-                result = "Value out of range -Please enter a number in the range 0-3999.";
+                result = "Value out of range - Please enter a number in the range 0-3999.";
             }
 
             return result;
 
+        }
+
+        public int ConvertToDigit(string romanNumeral)
+        {
+            return 0;
         }
     }
 }

@@ -109,14 +109,22 @@ namespace Exercises.Tests
         {
             KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
             string result = kataRomanNumerals.ConvertToRomanNumeral(-1);
-            Assert.AreEqual("Value out of range -Please enter a number in the range 0-3999.", result);
+            Assert.AreEqual("Value out of range - Please enter a number in the range 0-3999.", result);
             result = kataRomanNumerals.ConvertToRomanNumeral(-234234);
-            Assert.AreEqual("Value out of range -Please enter a number in the range 0-3999.", result);
+            Assert.AreEqual("Value out of range - Please enter a number in the range 0-3999.", result);
             result = kataRomanNumerals.ConvertToRomanNumeral(4000);
-            Assert.AreEqual("Value out of range -Please enter a number in the range 0-3999.", result);
+            Assert.AreEqual("Value out of range - Please enter a number in the range 0-3999.", result);
             result = kataRomanNumerals.ConvertToRomanNumeral(12423432);
-            Assert.AreEqual("Value out of range -Please enter a number in the range 0-3999.", result);
+            Assert.AreEqual("Value out of range - Please enter a number in the range 0-3999.", result);
             
+        }
+        [TestMethod]
+        public void ConvertToDigitTestForEmptyStringInput()
+        {
+            KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
+            int result = kataRomanNumerals.ConvertToDigit("");
+            Assert.AreEqual(0, result);
+
         }
 
     }
