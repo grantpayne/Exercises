@@ -35,7 +35,33 @@ namespace Exercises
 
         public int ConvertToDigit(string romanNumeral)
         {
-            return 0;
+            Dictionary<char, int> numeralValues = new Dictionary<char, int>();
+
+            numeralValues.Add('M', 1000);
+            numeralValues.Add('D', 500);
+            numeralValues.Add('C', 100);
+            numeralValues.Add('L', 50);
+            numeralValues.Add('X', 10);
+            numeralValues.Add('V', 5);
+            numeralValues.Add('I', 1);
+
+            int aggregate = 0;
+
+            if (romanNumeral != "")
+            {
+                for (int i = 0; i < romanNumeral.Length; i++)
+                {
+                    if (i + 1 < romanNumeral.Length && numeralValues[romanNumeral[i]] < numeralValues[romanNumeral[i + 1]])
+                    {
+                        aggregate -= numeralValues[romanNumeral[i]];
+                    }
+                    else
+                    {
+                        aggregate += numeralValues[romanNumeral[i]];
+                    }
+                }
+            }
+            return aggregate;
         }
     }
 }

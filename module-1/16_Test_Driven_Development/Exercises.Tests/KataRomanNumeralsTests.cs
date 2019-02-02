@@ -131,19 +131,19 @@ namespace Exercises.Tests
             KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
             int resultNum = kataRomanNumerals.ConvertToDigit("I");
             Assert.AreEqual(1, resultNum);
-            int resultNum = kataRomanNumerals.ConvertToDigit("IV");
+            resultNum = kataRomanNumerals.ConvertToDigit("IV");
             Assert.AreEqual(4, resultNum);
-            int result = kataRomanNumerals.ConvertToDigit("IX");
+            resultNum = kataRomanNumerals.ConvertToDigit("IX");
             Assert.AreEqual(9, resultNum);
-            int result = kataRomanNumerals.ConvertToDigit("X");
+            resultNum = kataRomanNumerals.ConvertToDigit("X");
             Assert.AreEqual(10, resultNum);
-            int result = kataRomanNumerals.ConvertToDigit("XLIV");
+            resultNum = kataRomanNumerals.ConvertToDigit("XLIV");
             Assert.AreEqual(44, resultNum);
-            int result = kataRomanNumerals.ConvertToDigit("CDXCIX");
+            resultNum = kataRomanNumerals.ConvertToDigit("CDXCIX");
             Assert.AreEqual(499, resultNum);
-            int result = kataRomanNumerals.ConvertToDigit("MMMCMXCIX");
+            resultNum = kataRomanNumerals.ConvertToDigit("MMMCMXCIX");
             Assert.AreEqual(3999, resultNum);
-            int result = kataRomanNumerals.ConvertToDigit("MMCMXLII");
+            resultNum = kataRomanNumerals.ConvertToDigit("MMCMXLII");
             Assert.AreEqual(2942, resultNum);
         }
 
