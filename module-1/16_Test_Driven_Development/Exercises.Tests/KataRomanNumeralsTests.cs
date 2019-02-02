@@ -35,6 +35,29 @@ namespace Exercises.Tests
             result = kataRomanNumerals.ConvertToRomanNumeral(9);
             Assert.AreEqual("IX", result);
         }
+        [TestMethod]
+        public void ConvertToRomanNumeralTestTens()
+        {
+            KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
+            string result = kataRomanNumerals.ConvertToRomanNumeral(10);
+            Assert.AreEqual("X", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(11);
+            Assert.AreEqual("XI", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(14);
+            Assert.AreEqual("XIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(19);
+            Assert.AreEqual("XIX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(20);
+            Assert.AreEqual("XX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(40);
+            Assert.AreEqual("XL", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(90);
+            Assert.AreEqual("XC", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(99);
+            Assert.AreEqual("XCIX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(44);
+            Assert.AreEqual("XLIV", result);
+        }
 
     }
 }
