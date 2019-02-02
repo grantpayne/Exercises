@@ -58,6 +58,29 @@ namespace Exercises.Tests
             result = kataRomanNumerals.ConvertToRomanNumeral(44);
             Assert.AreEqual("XLIV", result);
         }
+        [TestMethod]
+        public void ConvertToRomanNumeralTestHundreds()
+        {
+            KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
+            string result = kataRomanNumerals.ConvertToRomanNumeral(100);
+            Assert.AreEqual("C", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(104);
+            Assert.AreEqual("CIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(109);
+            Assert.AreEqual("CIX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(333);
+            Assert.AreEqual("CCCXXXIII", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(444);
+            Assert.AreEqual("CDXLIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(449);
+            Assert.AreEqual("CDXLIX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(784);
+            Assert.AreEqual("DCCLXXXIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(894);
+            Assert.AreEqual("DCCCXCIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(999);
+            Assert.AreEqual("CMXCIX", result);
+        }
 
     }
 }
