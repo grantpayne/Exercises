@@ -81,6 +81,29 @@ namespace Exercises.Tests
             result = kataRomanNumerals.ConvertToRomanNumeral(999);
             Assert.AreEqual("CMXCIX", result);
         }
+        [TestMethod]
+        public void ConvertToRomanNumeralTestThousands()
+        {
+            KataRomanNumerals kataRomanNumerals = new KataRomanNumerals();
+            string result = kataRomanNumerals.ConvertToRomanNumeral(1000);
+            Assert.AreEqual("M", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(1001);
+            Assert.AreEqual("MI", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(1111);
+            Assert.AreEqual("MCXI", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(1234);
+            Assert.AreEqual("MCCXXXIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(1444);
+            Assert.AreEqual("MCDXLIV", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(1999);
+            Assert.AreEqual("MCMXCIX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(2399);
+            Assert.AreEqual("MMCCCXCIX", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(2878);
+            Assert.AreEqual("MMDCCCLXXVIII", result);
+            result = kataRomanNumerals.ConvertToRomanNumeral(3999);
+            Assert.AreEqual("MMMCMXCIX", result);
+        }
 
     }
 }
