@@ -11,7 +11,7 @@ namespace WordSearch
             //1. Ask the user for the search string
             Console.WriteLine("What is the search word you are looking for?");
             string searchWord = Console.ReadLine();
-            Console.WriteLine("Should the seatch be case sensitive (Y/N)");
+            Console.WriteLine("Should the search be case sensitive (Y/N)");
             char caseSensitive = char.Parse(Console.ReadLine());
             //2. Ask the user for the file path
             Console.WriteLine("What is fully qualified name of the file that should be searched?");
