@@ -28,6 +28,7 @@ namespace FizzWriter
                         else
                         {
                             sw.WriteLine(i);
+                            
                         }
                     }
                     
@@ -35,6 +36,7 @@ namespace FizzWriter
                 }
                 Console.WriteLine("FizzBuzz.txt has been created.");
                 Console.ReadLine();
+                
             }
             catch (Exception)
             {
