@@ -43,7 +43,7 @@ SELECT name, lifeexpectancy FROM country WHERE continent = 'Oceania' AND lifeexp
 -- 19. The name of all countries on the continent of Oceania for which an average life expectancy has not been provided (i.e. equal to null) (8 rows)
 SELECT name FROM country WHERE continent = 'Oceania' AND lifeexpectancy IS null;
 -- 20. The name, continent, GNP, and average life expectancy of all countries that have an average life expectancy of at least 70 years and a GNP between $1 million and $100 million dollars (3 rows)
-SELECT name, continent, gnp, lifeexpectancy FROM country WHERE lifeexpectancy >= 70 AND gnp > 1 AND gnp < 100;
+SELECT name, continent, gnp, lifeexpectancy FROM country WHERE lifeexpectancy >= 70 AND gnp BETWEEN 1 AND 100;  -->= 1 AND gnp <= 100;
 -- 21. The per capita GNP (i.e. GNP divided by population) in US Dollars of all countries in Europe (46 rows)
 SELECT name, (gnp / population) AS 'per capita GNP' FROM country WHERE continent = 'Europe';
 -- 22. The number of years since independence for all countries that have a year of independence (192 rows)
