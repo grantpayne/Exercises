@@ -13,5 +13,115 @@
     box-sizing: border-box;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
   }
+
+body {
+  margin: 0px;
+  background-color: rgb(192, 192, 192, 0.1);
+}
+
+header {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.subheading {
+  color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+}
+
+aside {
+  position: fixed;
+  text-align: center;
+  height: 100%;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 1);
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: #00adee
+  
+}
+aside ul{
+  margin: 0;
+  padding: 0;
+  
+}
+
+aside li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 20px;
+  
+  
+}
+
+aside img {
+  width: 125px;
+  margin-top: 10px;
+}
+
+aside li a {
+  justify-content: center;
+  color: #00adee;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: #00adee;
+  padding-bottom: 40px;
+  width: 100px;
+  
+  
+}
+
+main {
+  margin-left: 200px;
+}
+
+main > img {
+  width: 2400px;
+  padding-left: 20px;
+}
+
+section {
+  display: flex;
+  width: 2400px;
+  
+  max-width: 100%;
+}
+
+section div {
+  padding: 20px;
+}
+
+#our-work{
+  border-left-style: solid;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: rgba(170, 239, 135, 0.8)
+}
+
+section div h2 {
+  color: #8cc36f;
+}
+
+section div h2 i {
+  padding: 10px;
+}
+
+footer {
+  padding: 20px;
+}
+
+footer div img {
+  width: 50px;
+}
+
+
+
+
+
+
   
   
