@@ -46,6 +46,7 @@ header img {
 
 #student-picture {
     grid-area: 1 / 2 / 2 / 3;
+    align-self: center;
 }
 
 #student-picture img {
@@ -73,6 +74,10 @@ header img {
     grid-area: 3 / 1 / 4 / 3;
     display: flex;
     flex-flow: row wrap;
+}
+
+#experience div:last-child {
+    align-self: center;
 }
 
 #experience > div {
