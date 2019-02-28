@@ -3,14 +3,58 @@
     ViewData["Title"] = "FizzBuzz";
     int number = Convert.ToInt32(ViewData["number"]);
 }
+<style>
+    #FizzBuzz {
+        font-size: 2em;
+        color: #228b22;
+    }
+
+    #Buzz {
+        color: red;
+    }
+
+    #Fizz {
+        color: blue;
+    }
+</style>
 
 <h2>FizzBuzz</h2>
 
 <!-- Example navigation for part 2 of exercise. -->
 <nav>
     <ul>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="1">1</a></li>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="10">10</a></li>
         <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="20">20</a></li>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="25">25</a></li>
         <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="50">50</a></li>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="100">100</a></li>
+        <li><a asp-controller="Home" asp-action="FizzBuzz" asp-route-number="1000">1000</a></li>
     </ul>
 </nav>
+
+
+<ul>
+    @for (int i = 1; i <= @number; i++)
+    {
+        @if (i % 3 == 0 && i % 5 == 0)
+        {
+            <li id="FizzBuzz">FizzBuzz</li>
+        } 
+        else if (i % 5 == 0)
+        {
+            <li id="Buzz">Buzz</li>
+        }
+        else if (i % 3 == 0)
+        {
+            <li id="Fizz">Fizz</li>
+        }
+        else
+        {
+            <li>@i</li>
+        }
+    }
+</ul>
+
+
 
