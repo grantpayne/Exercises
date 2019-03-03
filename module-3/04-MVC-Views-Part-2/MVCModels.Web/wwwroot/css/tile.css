@@ -1,0 +1,38 @@
+﻿#outerFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.productFlexContainer {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding-bottom: 20px;
+}
+
+.productImage {
+    height: 150px;
+}
+
+.bestSellerImage {
+    width: 200px;
+}
+
+.lowStock {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: crimson;
+}
+
+.weightBold {
+    font-weight: bold;
+}
+
+.starImage {
+    width: 125px;
+}

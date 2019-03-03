@@ -1,0 +1,39 @@
+﻿#productFlex {
+    display: flex;
+}
+
+.productNameFlex {
+    display: flex;
+    align-items: center;
+}
+
+.imageFlexCell {
+    flex-basis: 45%;
+}
+
+.infoFlexCell {
+    flex-basis: 55%;
+    padding-left: 40px;
+}
+
+.bestSellerImage {
+    padding-left: 5px;
+    height: 30px;
+}
+
+.productImage {
+    width: 100%;
+}
+
+.starImage {
+    width: 125px;
+}
+
+.price {
+    font-weight: bold;
+    color: crimson;
+}
+
+.weightBold, .descriptionBold {
+    font-weight: bold;
+}
