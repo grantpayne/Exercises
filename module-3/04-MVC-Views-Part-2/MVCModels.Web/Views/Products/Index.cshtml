@@ -1,0 +1,104 @@
+﻿@model IList<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/index.css">
+
+@*<style>
+
+    #outerFlexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .productFlexbox {
+        display: flex;
+        border-bottom: solid;
+        border-width: 1px;
+        border-color: lightgray;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    .productImage {
+        width: 300px;
+        padding-right: 40px;
+    }
+
+    .productInfoFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .productNameFlex {
+        display: flex;
+        align-items: center;
+    }
+
+    .starImage {
+        width: 125px;
+    }
+
+    .bestSellerImage {
+        padding-left: 5px;
+        height: 30px;
+    }
+
+    .lowStock {
+        color: dodgerblue;
+        font-weight: bold;
+    }
+
+    .price {
+        font-weight: bold;
+        color: crimson;
+    }
+
+    .weightBold {
+        font-weight: bold;
+    }
+</style>*@
+
+<h2>All Products</h2>
+
+<div id="outerFlexContainer">
+
+    @foreach (Product product in Model)
+    {
+        string roundedProductStars = Math.Ceiling(product.AverageRating).ToString();
+
+        <div class="productFlexbox">
+
+            <div>
+                <a asp-controller="Products" asp-action="Detail" asp-route-id="@product.ProductId"><img class="productImage" src="~/images/@product.ImageName" /></a>
+            </div>
+            <div class="productInfoFlex">
+                <div class="productNameFlex">
+                    <a asp-controller="Products" asp-action="Detail" asp-route-id="@product.ProductId">
+                        <h3 class="productName">@product.Name</h3>
+                    </a>
+                    @if (product.IsTopSeller)
+                    {
+                        <img class="bestSellerImage" src="~/images/best-seller.png" />
+                    }
+                </div>
+                <p>by @product.Manufacturer</p>
+                @if (product.RemainingStock < 5)
+                {
+                    <p class="lowStock">Only @product.RemainingStock left!</p>
+                }
+                <p class="price">$@product.Price</p>
+                <p><span class="weightBold">Weight </span>@product.WeightInLbs lbs</p>
+                <img class="starImage" src="~/images/@roundedProductStars-star.png" />
+            </div>
+
+        </div>
+
+    }
+
+
+</div>
+

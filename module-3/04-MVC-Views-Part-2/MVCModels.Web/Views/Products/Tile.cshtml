@@ -1,0 +1,85 @@
+﻿@model IList<Product>
+@{
+    ViewData["Title"] = "Tile";
+}
+
+<style>
+
+    #outerFlexContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .productFlexContainer {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        padding-bottom: 20px;
+    }
+
+    .productImage {
+        height: 150px;
+    }
+
+    .bestSellerImage {
+        width: 200px;
+    }
+
+    .lowStock {
+        color: dodgerblue;
+        font-weight: bold;
+    }
+
+    .price {
+        font-weight: bold;
+        color: crimson;
+    }
+
+    .weightBold {
+        font-weight: bold;
+    }
+
+    .starImage {
+        width: 125px;
+    }
+</style>
+
+<h2>All Products</h2>
+
+<div id="outerFlexContainer">
+
+    @foreach (Product product in Model)
+    {
+        <div class="productFlexContainer">
+
+            @{
+                string roundedProductStars = Math.Ceiling(product.AverageRating).ToString();
+            }
+
+            <div>
+                <a asp-controller="Products" asp-action="Detail" asp-route-id="@product.ProductId">
+                    <img class="productImage" src="~/images/@product.ImageName" />
+                </a>
+            </div>
+            <a asp-controller="Products" asp-action="Detail" asp-route-id="@product.ProductId">
+                <h3 class="productName">@product.Name</h3>
+            </a>
+            @if (product.IsTopSeller)
+            {
+                <img class="bestSellerImage" src="~/images/best-seller.png" />
+            }
+            <p>by @product.Manufacturer</p>
+            @if (product.RemainingStock < 5)
+            {
+                <p class="lowStock">Only @product.RemainingStock left!</p>
+            }
+
+            <p class="price">$@product.Price</p>
+            <p><span class="weightBold">Weight </span>@product.WeightInLbs lbs</p>
+            <img class="starImage" src="~/images/@roundedProductStars-star.png" />
+
+        </div>
+    }
+
+</div>

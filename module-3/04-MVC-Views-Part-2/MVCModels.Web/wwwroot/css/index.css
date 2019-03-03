@@ -1,0 +1,53 @@
+﻿#outerFlexContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.productFlexbox {
+    display: flex;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: flex-start;
+}
+
+.productImage {
+    width: 300px;
+    padding-right: 40px;
+}
+
+.productInfoFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productNameFlex {
+    display: flex;
+    align-items: center;
+}
+
+.starImage {
+    width: 125px;
+}
+
+.bestSellerImage {
+    padding-left: 5px;
+    height: 30px;
+}
+
+.lowStock {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: crimson;
+}
+
+.weightBold {
+    font-weight: bold;
+}
