@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GETForms.Web.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -29,6 +30,11 @@ namespace GETForms.Web
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            string connectionString = Configuration.GetConnectionString("Default");
+
+            services.AddScoped<IActorDAL, ActorDAL>(a => new ActorDAL(connectionString));
+            services.AddScoped<IFilmDAL, FilmDAL>(f => new FilmDAL(connectionString));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

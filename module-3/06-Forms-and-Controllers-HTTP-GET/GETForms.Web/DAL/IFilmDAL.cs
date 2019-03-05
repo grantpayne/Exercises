@@ -12,6 +12,6 @@ namespace GETForms.Web.DAL
         /// <param name="minLength"></param>
         /// <param name="maxLength"></param>
         /// <returns></returns>
-        IList<Film> GetFilmsBetween(string genre, int minLength, int maxLength);
+        IList<Film> GetFilmsBetween(string genre, int? minLength, int? maxLength);
     }
 }

@@ -23,7 +23,7 @@ namespace GETForms.Web.DAL
         /// <param name="minLength"></param>
         /// <param name="maxLength"></param>
         /// <returns></returns>
-        public IList<Film> GetFilmsBetween(string genre, int minLength, int maxLength)
+        public IList<Film> GetFilmsBetween(string genre, int? minLength, int? maxLength)
         {
             IList<Film> films = new List<Film>();
 
@@ -50,6 +50,8 @@ namespace GETForms.Web.DAL
 
             return films;
         }
+
+
 
         /// <summary>
         /// Maps a single sql row to a film object.
