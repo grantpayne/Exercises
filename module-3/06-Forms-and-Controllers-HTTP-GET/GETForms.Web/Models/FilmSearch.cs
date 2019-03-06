@@ -11,38 +11,37 @@ namespace GETForms.Web.Models
     {
 
         [Display(Name = "Minimum Length: ")]
-        public int? MinimumLength { get; set; }
+        public int MinimumLength { get; set; }
 
+
+        private int? maximumLength;
         [Display(Name = "Maximum Length: ")]
-        public int? MaximumLength { get; set; }
+        public int MaximumLength { get; set; }
+        
+       
 
         public string SelectedGenre { get; set; }
 
         [Display(Name = "Genre: ")]
-        public static List<SelectListItem> Genres = new List<SelectListItem>()
+        public List<SelectListItem> Genres = new List<SelectListItem>()
         {
-            new SelectListItem() { Text = "Action", Value = "1" },
-            new SelectListItem() { Text = "Animation", Value = "2" },
-            new SelectListItem() { Text = "Children", Value = "3" },
-            new SelectListItem() { Text = "Classics", Value = "4" },
-            new SelectListItem() { Text = "Comedy", Value = "5" },
-            new SelectListItem() { Text = "Documentary", Value = "6" },
-            new SelectListItem() { Text = "Drama", Value = "7" },
-            new SelectListItem() { Text = "Family", Value = "8" },
-            new SelectListItem() { Text = "Foreign", Value = "9" },
-            new SelectListItem() { Text = "Games", Value = "10" },
-            new SelectListItem() { Text = "Horror", Value = "11" },
-            new SelectListItem() { Text = "Music", Value = "12" },
-            new SelectListItem() { Text = "New", Value = "13" },
-            new SelectListItem() { Text = "Sci-Fi", Value = "14" },
-            new SelectListItem() { Text = "Sports", Value = "15" },
-            new SelectListItem() { Text = "Travel", Value = "16" }
-
-
+            new SelectListItem() { Text = "Action"},
+            new SelectListItem() { Text = "Animation"},
+            new SelectListItem() { Text = "Children"},
+            new SelectListItem() { Text = "Classics"},
+            new SelectListItem() { Text = "Comedy"},
+            new SelectListItem() { Text = "Documentary"},
+            new SelectListItem() { Text = "Drama"},
+            new SelectListItem() { Text = "Family"},
+            new SelectListItem() { Text = "Foreign"},
+            new SelectListItem() { Text = "Games"},
+            new SelectListItem() { Text = "Horror"},
+            new SelectListItem() { Text = "Music"},
+            new SelectListItem() { Text = "New"},
+            new SelectListItem() { Text = "Sci-Fi"},
+            new SelectListItem() { Text = "Sports"},
+            new SelectListItem() { Text = "Travel"}
         };
-
-
-
 
         public IList<Film> Results { get; set; }
 

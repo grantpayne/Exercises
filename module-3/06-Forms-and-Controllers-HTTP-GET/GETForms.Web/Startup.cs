@@ -35,6 +35,7 @@ namespace GETForms.Web
 
             services.AddScoped<IActorDAL, ActorDAL>(a => new ActorDAL(connectionString));
             services.AddScoped<IFilmDAL, FilmDAL>(f => new FilmDAL(connectionString));
+            services.AddScoped<ICustomerDAL, CustomerDAL>(c => new CustomerDAL(connectionString));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);

@@ -1,0 +1,29 @@
+﻿@model GETForms.Web.Models.FilmSearch
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Search</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SearchResult" method="get">
+            <div class="form-group">
+                <label asp-for="MinimumLength" class="control-label"></label>
+                <input asp-for="MinimumLength" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="MaximumLength" class="control-label"></label>
+                <input asp-for="MaximumLength" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SelectedGenre"></label>
+                <select asp-for="SelectedGenre" asp-items="Model.Genres"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>

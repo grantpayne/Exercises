@@ -4,13 +4,13 @@
     ViewData["Title"] = "SearchResult";
 }
 
-<h2>SearchResult</h2>
+<h2>Search Results</h2>
 
-<h4>FilmSearch</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="SearchResult">
+        <form asp-action="SearchResult" method="get">
             <div class="form-group">
                 <label asp-for="MinimumLength" class="control-label"></label>
                 <input asp-for="MinimumLength" class="form-control" />
@@ -20,17 +20,54 @@
                 <input asp-for="MaximumLength" class="form-control" />
             </div>
             <div class="form-group">
-                <label asp-for="SelectedGenre" class="control-label"></label>
-                <input asp-for="SelectedGenre" class="form-control" />
+                <label asp-for="SelectedGenre"></label>
+                <select asp-for="SelectedGenre" asp-items="Model.Genres"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Search" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@if (Model.Results.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Release Year</th>
+                <th>Length (minutes)</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Film film in Model.Results)
+            {
+                <tr>
+                    <td>
+                        @film.Title
+                    </td>
+                    <td>
+                        @film.Description
+                    </td>
+                    <td>
+                        @film.ReleaseYear
+                    </td>
+                    <td>
+                        @film.Length
+                    </td>
+                    <td>
+                        @film.Rating
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+
 

@@ -21,9 +21,9 @@ namespace GETForms.Web.Controllers
         /// The request to display an empty search page.
         /// </summary>
         /// <returns></returns>
-        public ActionResult Index()
+        public ActionResult Index(FilmSearch model)
         {
-            return null;
+            return View(model);
         }
 
         /// <summary>
