@@ -1,6 +1,64 @@
-﻿
+﻿@model IList<Review>
 @{
     ViewData["Title"] = "Home Page";
 }
 
+<style>
 
+    #FlexContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ReviewTitleFlex {
+        display: flex;
+        flex-direction: row;
+        padding-top: 10px;
+    }
+
+    .RevewText {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .SingleReview {
+        border-bottom: solid;
+        border-color: darkgray;
+        border-width: 3px;
+    }
+
+    #DummiesImage {
+        width: 300px;
+        padding-bottom: 20px;
+    }
+</style>
+
+
+
+<div id="FlexContainer">
+
+    <img id="DummiesImage" src="~/images/forDummies.png" />
+
+    <a asp-controller="Home" asp-action="NewReview">Submit a New Review</a>
+
+    <h2>Past Reviews</h2>
+
+    @foreach (Review review in Model)
+    {
+
+        <div class="SingleReview">
+            <div class="ReviewTitleFlex">
+                <h4>@review.Title</h4>
+                @for (int i = 0; i < review.Rating; i++)
+                {
+                    <div><img src="~/images/star.png" /></div>
+                }
+            </div>
+            <p>by @review.Username on @review.Date.ToShortDateString()</p>
+            <p class="RevewText">@review.Text</p>
+        </div>
+    }
+
+</div>
+
+<a asp-controller="Home" asp-action="NewReview">Submit a New Review</a>

@@ -34,7 +34,7 @@ namespace Post.Web
 
             string connectionString = Configuration.GetConnectionString("Default");
 
-            services.AddScoped<IReviewDAL, ReviewSqlDal>(a => new ReviewSqlDal(connectionString));
+            services.AddScoped<ReviewSqlDal>(a => new ReviewSqlDal(connectionString));
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
