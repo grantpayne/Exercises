@@ -19,20 +19,70 @@ namespace Validation.Web.Controllers
 
         // GET: User/Register
         // Return the empty registration view
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+
 
         // POST: User/Register
         // Validate the model and redirect to confirmation (if successful) or return the 
-        // registration view (if validation fails)        
+        // registration view (if validation fails)     
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Register(RegistrationViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                model.Password = "";
+                model.ConfirmPassword = "";
+                return View(model);
+            }
+            else
+            {
+                return RedirectToAction("RegisterConfirmation");
+            }
+        }
 
         // GET: User/Login
         // Return the empty login view
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
 
         // POST: User/Login  
         // Validate the model and redirect to login (if successful) or return the 
         // login view (if validation fails)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Login(LoginViewModel login)
+        {
+            if (!ModelState.IsValid)
+            {
+                login.Password = "";
+                return View(login);
+            }
+            else
+            {
+                return RedirectToAction("LoginConfirmation");
+            }
+        }
 
         // GET: User/Confirmation
         // Return the confirmation view
+        [HttpGet]
+        public IActionResult LoginConfirmation()
+        {
+            return View();
+        }
 
+        [HttpGet]
+        public IActionResult RegisterConfirmation()
+        {
+            return View();
+        }
     }
 }
