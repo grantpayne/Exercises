@@ -1,5 +1,5 @@
-/*
- * Document this function
+/**
+ * @param {number} month integral representation of the month
  */
 function isSummer(month, day = 1, hemisphere = 'northern') {
   if (month === 7 || month === 8) {
